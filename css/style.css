@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Forum&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Manrope";
+    overflow-x: hidden;
+    transition: 1s;
+}
+
+.dark_mode {
+    background-color: rgb(44, 44, 44);
+    color: white;
+}
+
+.dark_text {
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+    margin: 0;
+}
+
+.container {
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+header {
+    margin-top: 20px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_title {
+    font-weight: 800;
+    font-size: 36px;
+}
+
+.header_right_block_text {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.header_right_block_percent {
+    font-size: 14px;
+    text-align: right;
+}
+
+.welcome {
+    padding-top: 260px;
+    padding-bottom: 495px;
+    position: relative;
+}
+
+.welcome .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome_links {
+    display: flex;
+    rotate: -90deg;
+    position: absolute;
+    left: -3vw;
+    top: 30vh;
+}
+
+.welcome_link {
+    display: inline-block;
+    margin-right: 26px;
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    transition: 1s;
+}
+
+.welcome_link::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.welcome_link:hover::after {
+    width: 100%;
+}
+
+
+.welcome_dark {
+    position: absolute;
+    rotate: -90deg;
+    right: 5vw;
+    top: 50vh;
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.welcome_anim_text {
+    font-family: 'DotGothic16';
+    font-weight: 400;
+    font-size: 45px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper_img {
+    max-width: 500px;
+    max-height: 260px;
+    border-radius: 10px;
+    box-shadow: -1px 2px 62px -6px rgba(34, 60, 80, 0.36);
+}
+
+.cases_title {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.skills_title,
+.cases_title {
+    transform: translateX(-15%);
+    opacity: 0;
+}
+
+.swiper {
+    opacity: 0;
+    transform: translateY(30%);
+}
+
+.swiper_active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s;
+}
+
+.active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: 1s;
+}
+
+
+
+.cases_title::after {
+    position: absolute;
+    content: "";
+    border-bottom: 5px solid black;
+    left: 0;
+    bottom: -10px;
+    width: 100px;
+    transition: 1s;
+}
+
+.cases {
+    padding-bottom: 200px;
+}
+
+.skills_photo {
+    max-width: 198px;
+    overflow: hidden;
+    max-height: 198px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 71px;
+    margin-left: 78px;
+    opacity: 0;
+    transform: translateX(100%);
+    z-index: -1;
+
+}
+
+.active_photo {
+    transform: translateX(0);
+    opacity: 1;
+    transition: 1s;
+}
+
+.skills_photo img {
+    max-width: 198px;
+}
+
+.skills_info {
+    display: flex;
+    margin-bottom: 74px;
+}
+
+.skills_name {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 13px;
+}
+
+.skills_main_text {
+    margin-bottom: 19px;
+    margin-top: 13px;
+}
+
+.skills_info_text {
+    font-family: 'Manrope';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    max-width: 1000px;
+    opacity: 0;
+    transform: translateX(60%);
+}
+
+.active_text {
+    transform: translateX(0);
+    opacity: 1;
+    transition: 1s;
+}
+
+
+
+.skills_links_socials {
+    text-decoration: none;
+    color: black;
+    font-family: 'Manrope';
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 19px;
+}
+
+.skills_title {
+    margin-bottom: 82px;
+    position: relative;
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.skills_title::after {
+    position: absolute;
+    content: "";
+    border-bottom: 5px solid black;
+    left: 0;
+    bottom: -10px;
+    width: 100px;
+    transition: 1s;
+}
+
+.skills_card {
+    background: #FFFFFF;
+    border: 1px solid rgb(219, 219, 219);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 278px;
+
+    display: flex;
+    padding: 15px 20px;
+}
+
+.skills_card_line {
+    display: block;
+    height: 45px;
+    width: 2px;
+    background-color: black;
+    margin-right: 17px;
+}
+
+.skills_card_title {
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.skills_card_text {
+    font-family: 'Manrope';
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.skilld_card_img {
+    margin-right: 17px;
+}
+
+.skills_main_skills {
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-150%);
+    opacity: 0;
+}
+
+.cards_active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s;
+}
+
+.skills {
+    margin-bottom: 200px;
+}
+
+.contact {
+    padding: 100px 0;
+}
+
+.contact_img {
+    max-width: 55px;
+    margin-right: 84px;
+    transition: 0.5s;
+}
+
+.contact_img:hover {
+    scale: 1.25;
+}
+
+
+
+.contact_title {
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 78px;
+    position: relative;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.contact_active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+}
+
+
+
+.contact_title::after {
+    position: absolute;
+    content: "";
+    border-bottom: 5px solid black;
+    left: 45%;
+    bottom: -10px;
+    width: 100px;
+    transition: 1s;
+}
+
+.contact_socials {
+    display: flex;
+    justify-content: center;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.socials_active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+}
+
+.footer_title {
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: 36px;
+}
+
+.footer_text {
+    font-family: 'Manrope';
+    font-weight: 300;
+    font-size: 12px;
+    text-align: right;
+    color: #808080;
+}
+
+footer {
+    padding: 40px 0;
+}
+
+.form_input {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 70px;
+    max-width: 250px;
+}
+
+.form_textarea {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.form_textarea,
+.form_title {
+    transform: translateY(-120%);
+    opacity: 0;
+    transition: 1s;
+}
+
+.form_active,
+.textarea_active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.form_block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    transform: translateY(150%);
+    opacity: 0;
+}
+
+.form_active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s;
+}
+
+.form_blocks {
+    display: flex;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form_btn {
+    margin-top: 40px;
+    background-color: transparent;
+    border: none;
+    padding: 15px 50px;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0;
+    scale: 0.3;
+}
+
+.btn_active {
+    scale: 1;
+    opacity: 1;
+    transition: 1s;
+}
+
+.form_btn:hover {
+    background-color: black;
+    color: white;
+}
