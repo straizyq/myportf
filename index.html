@@ -110,33 +110,35 @@
 
         <section class="form">
             <div class="container">
-                <form action="">
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="3a431b47-5a37-498a-87df-2fe7fe066119">
 
                     <div class="form_blocks">
                         <div class="form_block">
                             <h2 class="form_title">Имя*</h2>
-                            <input type="text" class="form_input" required placeholder="Александр">
+                            <input type="text" class="form_input" name="name" required placeholder="Александр">
 
 
                         </div>
 
                         <div class="form_block">
                             <h2 class="form_title">Электронная почта*</h2>
-                            <input type="email" class="form_input" required placeholder="email@mail.ru">
+                            <input type="email" name="email" class="form_input" required placeholder="email@mail.ru">
                         </div>
 
                         <div class="form_block">
                             <h2 class="form_title">Бюджет*</h2>
-                            <input type="text" class="form_input" required placeholder="25 000">
+                            <input type="text" name="price" class="form_input" required placeholder="25 000">
                         </div>
                     </div>
 
 
                     <h2 class="form_title">Описание проекта</h2>
-                    <textarea cols="70" rows="12" class="form_textarea" name=""
-                        id="" placeholder="Укажите данные для сайта как можно подробнее"></textarea>
+                    <textarea cols="70" rows="12" class="form_textarea" name="text"
+                        placeholder="Укажите данные для сайта как можно подробнее"></textarea>
 
-                        <button class="form_btn">Отправить</button>
+                    <button class="form_btn">Отправить</button>
                 </form>
             </div>
         </section>

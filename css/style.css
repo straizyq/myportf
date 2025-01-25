@@ -34,6 +34,7 @@ p {
 .container {
     max-width: 1700px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 header {
@@ -328,7 +329,6 @@ header .container {
 
 .contact_img {
     max-width: 55px;
-    margin-right: 84px;
     transition: 0.5s;
 }
 
@@ -372,6 +372,7 @@ header .container {
     justify-content: center;
     transform: translateX(100%);
     opacity: 0;
+    gap: 50px;
 }
 
 .socials_active {
@@ -479,4 +480,105 @@ form {
 .form_btn:hover {
     background-color: black;
     color: white;
+}
+
+@media(max-width: 1366px) {
+    .skills_photo {
+        width: 500px;
+    }
+
+    .skills_main_skills {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .form_input {
+        margin-right: 0;
+    }
+
+    .form_blocks {
+        gap: 30px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .skills_photo {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media(max-width: 854px) {
+    .welcome_links {
+        left: -10vw;
+    }
+
+    .welcome_dark {
+        right: -1vw;
+    }
+
+    .form_blocks {
+        flex-direction: column;
+    }
+
+    .form_textarea {
+        max-width: 300px;
+    }
+
+    .skills_photo {
+        max-width: 130px;
+        max-height: 130px;
+        justify-content: start;
+    }
+
+}
+
+@media(max-width: 750px) {
+    .welcome_links {
+        left: -17vw;
+    }
+
+    .welcome_dark {
+        right: -3vw;
+    }
+}
+
+@media(max-width: 660px) {
+    .skills_info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skills_photo {
+        max-width: 170px;
+        max-height: 170px;
+    }
+    
+    .welcome_anim_text {
+        font-size: 40px;
+    }
+
+    .swiper_img {
+        max-width: 300px;
+    }
+
+}
+
+@media(max-width: 612px) {
+    .welcome_links {
+        rotate: 0deg;
+        left: 3vw;
+        top: 0;
+    }
+
+    .welcome_dark {
+        right: -4vw;
+    }
+}
+
+@media(max-width: 340px){
+    .form_textarea {
+        max-width: 250px;
+    }
 }

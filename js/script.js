@@ -7,6 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 3,
         autoplay: {
             delay: 1000
+        },
+        spaceBetween: 10,
+        breakpoints: {
+            1300: {
+                slidesPerView: 3,
+                spaceBetween: 100
+            },
+            1100: {
+                slidesPerView: 2
+            },
+            300: {
+                slidesPerView: 1,
+                spaceBetween: 50
+            }
         }
     });
 
@@ -132,138 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (photo) {
         observer.observe(photo);
     }
-
-    // function darkmode() {
-    //     const body = document.body
-    //     const darkMode = localStorage.getItem("dark_mode") === "true"
-
-    //     localStorage.setItem("dark_mode", !darkMode)
-    //     body.classList.toggle("dark_mode")
-
-    //     const welcomeLink = document.querySelectorAll(".welcome_link")
-    //     const skillsCardTitle = document.querySelectorAll(".skills_card_title")
-    //     const skillsCardText = document.querySelectorAll(".skills_card_text")
-    //     const skillsLinkSocials = document.querySelector(".skills_links_socials")
-
-    //     const inputs = document.querySelectorAll(".form_input")
-    //     const formTextArea = document.querySelector(".form_textarea")
-
-    //     const formBtn = document.querySelector(".form_btn")
-
-    //     if (body.classList.contains("dark_mode")) {
-    //         skillsLinkSocials.style.color = "white"
-
-    //         formBtn.style.color = "white"
-
-    //         formTextArea.style.borderColor = "white"
-
-    //         formBtn.addEventListener("mouseover", () => {
-    //             formBtn.style.backgroundColor = "white"
-    //             formBtn.style.color = "black"
-    //         })
-    //         formBtn.addEventListener("mouseout", () => {
-    //             formBtn.style.backgroundColor = ""
-    //             formBtn.style.color = "white"
-    //         })
-
-    //         const style = document.createElement('style');
-    //         document.head.appendChild(style);
-
-    //         style.textContent = `
-    //             .welcome_link::after {
-    //                 background-color: white;
-    //             }
-
-    //             .cases_title::after {
-    //                 border-bottom: 5px solid white;
-    //             }
-
-    //             .skills_title::after {
-    //                 border-bottom: 5px solid white;
-    //             }
-
-    //             .contact_title::after {
-    //                 border-bottom: 5px solid white;
-    //             }
-    //         `
-    //     }
-
-    //     else {
-    //         skillsLinkSocials.style.color = "black"
-
-    //         formBtn.style.color = "black"
-
-    //         formTextArea.style.borderColor = "black"
-
-    //         formBtn.addEventListener("mouseover", () => {
-    //             formBtn.style.backgroundColor = "black"
-    //             formBtn.style.color = "white"
-    //         })
-    //         formBtn.addEventListener("mouseout", () => {
-    //             formBtn.style.backgroundColor = ""
-    //             formBtn.style.color = "black"
-    //         })
-
-    //         const style = document.createElement('style');
-    //         document.head.appendChild(style);
-
-    //         style.textContent = `
-    //             .welcome_link::after {
-    //                 background-color: black;
-    //             }
-
-    //             .cases_title::after {
-    //                 border-bottom: 5px solid black;
-    //             }
-
-    //             .skills_title::after {
-    //                 border-bottom: 5px solid black;
-    //             }
-
-    //             .contact_title::after {
-    //                 border-bottom: 5px solid black;
-    //             }
-    //         `
-    //     }
-
-
-    //     inputs.forEach(inpts => {
-    //         if (body.classList.contains("dark_mode")) {
-    //             inpts.style.borderColor = "white"
-    //         }
-    //         else {
-    //             inpts.style.borderColor = "black"
-    //         }
-    //     })
-
-    //     skillsCardText.forEach(txt => {
-    //         if (body.classList.contains("dark_mode")) {
-    //             txt.style.color = "black"
-    //         }
-    //         else {
-    //             txt.style.borderColor = "black"
-    //         }
-    //     })
-
-    //     skillsCardTitle.forEach(ttle => {
-    //         if (body.classList.contains("dark_mode")) {
-    //             ttle.style.color = "black"
-    //         }
-    //         else {
-    //             ttle.style.borderColor = "black"
-    //         }
-    //     })
-
-    //     welcomeLink.forEach(links => {
-    //         if (body.classList.contains("dark_mode")) {
-    //             links.style.color = "white"
-    //         }
-    //         else {
-    //             links.style.color = "black"
-    //         }
-
-    //     })
-    // }
 
     function darkApply() {
         const welcomeLink = document.querySelectorAll(".welcome_link")
@@ -423,7 +305,4 @@ document.addEventListener('DOMContentLoaded', () => {
             lightApply();
         }
     }
-
-
-
 });
